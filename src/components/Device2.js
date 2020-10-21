@@ -16,6 +16,7 @@ const Device = ({ url, position }) => {
   return (
       <a.primitive
       {...props}
+      className="device"
       onClick={() => setExpand(!expand)} 
       scale={props.scale}   
       object={scene}

@@ -6,16 +6,19 @@ import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader'
 
 const Device = ({ url, position }) => {
   const mesh = useRef(null);
-    
+  
+  //expand effect
   const [expand, setExpand] = useState(false);
   const props = useSpring({
     scale: expand ? [1.2,1.2,1.2] : [1,1,1],
   });
   
+  //loader for model
   const { scene } = useLoader(GLTFLoader, url, draco())
   return (
       <a.primitive
       {...props}
+      className="device"
       onClick={() => setExpand(!expand)} 
       scale={props.scale}   
       object={scene}

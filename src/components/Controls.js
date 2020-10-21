@@ -1,20 +1,27 @@
 import React from 'react';
-import { useRef } from 'react';
+import { useRef, useEffect } from 'react';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
 import {extend, useThree, useFrame } from 'react-three-fiber';
 
 
 extend({OrbitControls});
 
+
+
+
 const Controls = () => {
   const {
     camera,
     gl: { domElement},
+    
   } = useThree()
+
   const controls = useRef()
   useFrame((state) => controls.current.update())
+  
 
     return (
+
         <orbitControls
           enableZoom={false}
           maxPolarAngle={Math.PI / 2}
@@ -22,7 +29,9 @@ const Controls = () => {
           ref={controls}
           args={[camera, domElement]}
         />
+
     )
+    
 }
 
 export default Controls
