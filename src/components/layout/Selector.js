@@ -1,54 +1,39 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import Device from '../Device'
 import Device2 from '../Device2'
+import {Html} from 'drei'
 
-const Selector = () => {
-  const [selector, setSelector] = useState(null);
-  useEffect(() => {
-    function buttonLogger(){
-      var id = document.getElementsByClassName('btn')[0].id;
-      document.onmousedown = (e) => {
-        console.log(e);
-        switch (id){
-          case 'redButton':
-            setSelector('Device');
-            break;
-          case 'whiteButton':
-            setSelector('Device2');
-            break;
-            default:
-              setSelector("Device2");
-              break;
-        }
-      }
-    };
-    buttonLogger();
-  });
-  
-  switch (selector){
-    case 'Device':
-      return(
-        <>
-          <Device position={[-50,-90,0]} url={"/models/RED.gltf"} />
-        </>
-      );
-      case 'Device2':
-        return(
-          <>
-            <Device2 className='deviceWhite' url="/models/WHITE.gltf" position={[-50,-90,0]} />
-          </>
-        );
-      default:
-        return(
-          <>
-           <Device position={[-50,-90,0]} url={"/models/WHITE.gltf"} />    
-          </>
-        )
-      
+
+
+class Selector extends React.Component {
+  constructor(){
+    super();
+    this.state = { isRed: false }
   }
-  
+
+
+
+  _isRed = (bool) =>{
+    this.setState({
+      isRed: bool
+    });
+  }
+
+
+  render(){
+    return(
+      <>
+      <Html>
+      <button className="btn" onClick={this._isRed.bind(null, true)}>Red</button>
+      <button className="btn" onClick={this._isRed.bind(null, false)}>White</button>
+      </Html>
+      { this.state.isRed === true ? (<Device position={[-50,-90,0]} url={"/models/RED.gltf"} /> ) :(<Device2 position={[-50,-90,0]} url={"/models/WHITE.gltf"} />) }
+
+      </>
+    )
+  }
+
 }
 
-export default Selector
 
-
+export default Selector 
