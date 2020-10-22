@@ -222,6 +222,7 @@ img {
   top: 0;
   display: inline-flex;
   opacity: 1;
+  transition: opacity 0.3s;
 }
 
 .btn {
@@ -397,7 +398,6 @@ table th {
   padding: 0.7rem 2rem;
   z-index: 1;
   width: 100%;
-  opacity: 0.9;
   margin-bottom: 1rem;
 }
 

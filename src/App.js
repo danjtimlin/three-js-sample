@@ -13,15 +13,15 @@ import Navbar from './components/layout/Navbar'
 
 
 
+
 const hideBtn =()=>{
   const btn1 = document.getElementById('btn-1');
-  console.log('MouseDown')
   btn1.style.opacity = '0'
+
 }
 
 const showBtn = () =>{
   const btn1 = document.getElementById('btn-1');
-  console.log('MouseUp')
   btn1.style.opacity = '1'
 }
 
