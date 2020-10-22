@@ -25,8 +25,8 @@ class Selector extends React.Component {
       <Fragment>
       <Html>
         <div className="btn-group-selector" id="btn-1" >
-          <button className="btn btn-selector" onClick={this._isRed.bind(null, true)}>Red</button>
-          <button  className="btn btn-selector" onClick={this._isRed.bind(null, false)}>White</button>
+          <button className="btn btn-selector" onPointerOver={this._isRed.bind(null, true)}>Red</button>
+          <button  className="btn btn-selector" onPointerOver={this._isRed.bind(null, false)}>White</button>
         </div>
       </Html>
       { this.state.isRed === true ? (<Device position={[-50,-90,0]} url={"/models/RED.gltf"} /> ) :(<Device2 position={[-50,-90,0]} url={"/models/WHITE.gltf"} />) }

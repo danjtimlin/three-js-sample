@@ -221,6 +221,7 @@ img {
   left: 0;
   top: 0;
   display: inline-flex;
+  opacity: 1;
 }
 
 .btn {
@@ -256,13 +257,14 @@ img {
   margin-right: 0.2rem;
 }
 .btn-selector {
-  background-color: var(--danger-color);
+  background-color: var(--light-color);
   position: relative;
   display: block;
-  left: 100px;
-  top: 0;
+  left: 230px;
+  top: -200px;
   font-size: 1.2rem;
   z-index: 1;
+  box-shadow: 12px 12px 16px 0 #c2c2c2, -8px -8px 12px 0 #ede8e8;
 }
 
 .badge {

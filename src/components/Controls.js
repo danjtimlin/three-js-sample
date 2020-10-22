@@ -9,6 +9,8 @@ extend({OrbitControls});
 
 
 
+
+
 const Controls = () => {
   const {
     camera,
@@ -23,7 +25,11 @@ const Controls = () => {
     return (
 
         <orbitControls
-          enableZoom={false}
+          autoRotate={true}
+          autoRotateSpeed={[0.5]}
+          maxDistance={[400]}
+          enableDamping={true}
+          zoomOverPosition={true}
           maxPolarAngle={Math.PI / 2}
           minPolarAngle={Math.PI / 2}
           ref={controls}

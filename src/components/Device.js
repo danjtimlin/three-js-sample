@@ -19,7 +19,7 @@ const Device = ({ url, position }) => {
       <a.primitive
       {...props}
       className="device"
-      onClick={() => setExpand(!expand)} 
+      // onPointerEnter={() => setExpand(!expand)}
       scale={props.scale}   
       object={scene}
       locale={[0,1,-2]} 
