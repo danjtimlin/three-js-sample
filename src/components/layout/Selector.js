@@ -29,7 +29,7 @@ class Selector extends React.Component {
           <button  className="btn btn-selector" onPointerOver={this._isRed.bind(null, false)}>White</button>
         </div>
       </Html>
-      { this.state.isRed === true ? (<Device position={[-50,-90,0]} url={"/models/RED.gltf"} /> ) :(<Device2 position={[-50,-90,0]} url={"/models/WHITE.gltf"} />) }
+      { this.state.isRed === true ? (<Device position={[-50,-90,0]} url={"./models/RED.gltf"} /> ) :(<Device2 position={[-50,-90,0]} url={"./models/WHITE.gltf"} />) }
 
       </Fragment>
     )
