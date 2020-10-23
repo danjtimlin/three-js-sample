@@ -1,5 +1,5 @@
 import React from 'react';
-import { useRef, useEffect } from 'react';
+import { useRef } from 'react';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
 import {extend, useThree, useFrame } from 'react-three-fiber';
 

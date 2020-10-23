@@ -1,4 +1,4 @@
-import React, { Suspense, useEffect } from 'react';
+import React, { Suspense } from 'react';
 import * as THREE from 'three'
 import {Canvas,} from 'react-three-fiber'
 import { Html } from '@react-three/drei'
@@ -32,7 +32,7 @@ function App() {
         gl.shadowMap.enabled = true
         gl.shadowMap.type = THREE.PCFSoftShadowMap
       }} onPointerDown={hideBtn} onPointerUp={showBtn}>
-        <Suspense fallback={<Html>Loading...</Html>}>
+        <Suspense fallback={<Html><p>Loading...</p></Html>}>
         <ambientLight position={[0,0,0]} color={['#798c7c']} intensity={2} />
         <spotLight position={[0,1000,100]} penumbra={1} castShadow />
         <spotLight intensity={1} position={[-50,0,-10]} penumbra={1} castShadow />
