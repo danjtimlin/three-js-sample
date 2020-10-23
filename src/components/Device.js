@@ -7,8 +7,8 @@ import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader'
 const Device = ({ url, position }) => {
   const mesh = useRef(null);
   
-  //expand effect
-  const [expand, setExpand] = useState(false);
+  //expand effect zoom looks better so not enabled
+  const [expand] = useState(false);
   const props = useSpring({
     scale: expand ? [1.2,1.2,1.2] : [1,1,1],
   });
