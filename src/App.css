@@ -9,9 +9,6 @@ canvas:focus {
   outline: none;
 }
 
-@import url('https://fonts.googleapis.com/css?family=Roboto');
-@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Nunito:wght@300&display=swap');
-
 /* Global Styles */
 :root {
   --primary-color: #798c7c;
@@ -264,20 +261,19 @@ img {
   margin-right: 0.2rem;
 }
 .btn-selector {
-  background-color: var(--primary-color);
+  background-color: var(--dark-color);
   color: var(--light-color);
   position: relative;
-  display: block;
-  left: 230px;
-  top: -200px;
+  top: 4rem;
+  left: 2rem;
   font-size: 1.2rem;
   z-index: 1;
-  box-shadow: 10px 10px 14px 0 #5d6b5f, -6px -6px 10px 0 #8a9e8d;
+  /* box-shadow: 10px 10px 14px 0 #5d6b5f, -6px -6px 10px 0 #8a9e8d; */
 }
 .btn-selector:hover {
-  color: var(--success-color);
-  opacity: 0.8;
-  box-shadow: -4px -4px 6px 0 #8a9e8d, 6px 6px 8px 0 #5d6b5f;
+  color: var(--danger-color);
+  opacity: 0.3;
+  /* box-shadow: -4px -4px 6px 0 #8a9e8d, 6px 6px 8px 0 #5d6b5f; */
 }
 
 .badge {

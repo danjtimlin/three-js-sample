@@ -7,7 +7,8 @@ import {extend, useThree, useFrame } from 'react-three-fiber';
 extend({OrbitControls});
 
 
-
+          // maxPolarAngle={Math.PI / 1}
+          // minPolarAngle={Math.PI / 1}
 
 
 
@@ -29,9 +30,6 @@ const Controls = () => {
           autoRotateSpeed={[0.5]}
           maxDistance={[400]}
           enableDamping={true}
-          zoomOverPosition={true}
-          maxPolarAngle={Math.PI / 2}
-          minPolarAngle={Math.PI / 2}
           ref={controls}
           args={[camera, domElement]}
         />
